@@ -1,13 +1,13 @@
 letter	frequency
-Python	.08167
-SQL	.01492
-ETL	.02782
-Data Cleaning	.04253
-Numpy	.12702
-Pandas	.02288
-Scikit-learn	.02015
-Matplotlib	.06094
-Seaborn	.02288
-Scikit-learn	.02015
-Matplotlib	.06094
+Python	.70000
+SQL	.80000
+ETL	.70000
+Data Cleaning	.60000
+Numpy	.60000
+Pandas	.70000
+Scikit-learn	.70000
+Matplotlib	.80000
+Seaborn	.70000
+Azure	.80000
+Qlik View	.80000
 
