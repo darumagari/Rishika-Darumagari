@@ -1,9 +1,13 @@
 letter	frequency
-A	.08167
-B	.01492
-C	.02782
-D	.04253
-E	.12702
-F	.02288
-G	.02015
-H	.06094
+Python	.08167
+SQL	.01492
+ETL	.02782
+Data Cleaning	.04253
+Numpy	.12702
+Pandas	.02288
+Scikit-learn	.02015
+Matplotlib	.06094
+Seaborn	.02288
+Scikit-learn	.02015
+Matplotlib	.06094
+
