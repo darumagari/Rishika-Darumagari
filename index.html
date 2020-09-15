@@ -78,73 +78,22 @@
 								</section>
 							<!-- break for personal try -->
 								<section>
-									<!DOCTYPE html>
-									<meta charset="utf-8">
-									<style>
+									<h1>Bar Chart HTML</h1>
 
-									.bar {
-									  fill: steelblue;
-									}
+										<div class="chart-wrap vertical">
+										  <h2 class="title">Bar Chart HTML Example:  Using Only HTML And CSS</h2>
 
-									.bar:hover {
-									  fill: grey;
-									}
-
-									.axis--x path {
-									  display: none;
-									}
-
-									</style>
-									<svg width="960" height="500"></svg>
-									<script src="https://d3js.org/d3.v4.min.js"></script>
-									<script>
-
-									var svg = d3.select("svg"),
-									    margin = {top: 20, right: 20, bottom: 30, left: 40},
-									    width = +svg.attr("width") - margin.left - margin.right,
-									    height = +svg.attr("height") - margin.top - margin.bottom;
-
-									var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-									    y = d3.scaleLinear().rangeRound([height, 0]);
-
-									var g = svg.append("g")
-									    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-									d3.tsv("data.tsv", function(d) {
-									  d.frequency = +d.frequency;
-									  return d;
-									}, function(error, data) {
-									  if (error) throw error;
-
-									  x.domain(data.map(function(d) { return d.letter; }));
-									  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
-
-									  g.append("g")
-									      .attr("class", "axis axis--x")
-									      .attr("transform", "translate(0," + height + ")")
-									      .call(d3.axisBottom(x));
-
-									  g.append("g")
-									      .attr("class", "axis axis--y")
-									      .call(d3.axisLeft(y).ticks(10, "%"))
-									    .append("text")
-									      .attr("transform", "rotate(-90)")
-									      .attr("y", 6)
-									      .attr("dy", "0.71em")
-									      .attr("text-anchor", "end")
-									      .text("Frequency");
-
-									  g.selectAll(".bar")
-									    .data(data)
-									    .enter().append("rect")
-									      .attr("class", "bar")
-									      .attr("x", function(d) { return x(d.letter); })
-									      .attr("y", function(d) { return y(d.frequency); })
-									      .attr("width", x.bandwidth())
-									      .attr("height", function(d) { return height - y(d.frequency); });
-									});
-
-									</script>								
+										  <div class="grid">
+										      <div class="bar" style="--bar-value:85%;" data-name="Your Blog" title="Your Blog 85%"></div>
+										      <div class="bar" style="--bar-value:23%;" data-name="Medium" title="Medium 23%"></div>
+										     <div class="bar" style="--bar-value:7%;" data-name="Tumblr" title="Tumblr 7%"></div>
+										      <div class="bar" style="--bar-value:38%;" data-name="Facebook" title="Facebook 38%"></div>
+										      <div class="bar" style="--bar-value:35%;" data-name="YouTube" title="YouTube 35%"></div>
+										      <div class="bar" style="--bar-value:30%;" data-name="LinkedIn" title="LinkedIn 30%"></div>
+										      <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
+										      <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>    
+										  </div>
+										</div>								
 								</section>
 							<!-- break for personal try -->
 
